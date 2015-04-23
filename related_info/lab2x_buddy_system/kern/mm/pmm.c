@@ -304,6 +304,7 @@ pmm_init(void) {
     boot_cr3 = PADDR(boot_pgdir);
 
     check_pgdir();
+    while(1);
 
     static_assert(KERNBASE % PTSIZE == 0 && KERNTOP % PTSIZE == 0);
 
